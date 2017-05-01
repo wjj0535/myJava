@@ -1,0 +1,8 @@
+<project default="copy-resources">
+  <target name="init"/>
+  <target name="copy-resources" depends="init">
+    <copy todir="target/classes/com/aisino/manager51/mybatis/xml" filtering="true">
+      <fileset dir="src/main/java/com/aisino/manager51/mybatis/xml" includes="*.xml" excludes="**/*.java"/>
+    </copy>
+  </target>
+</project>
